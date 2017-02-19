@@ -1,0 +1,35 @@
+{
+  "name": "mindspace-js-basics",
+  "version": "1.0.0",
+  "description": "basic ecmascript",
+  "main": "es6-basics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build",
+    "build": "webpack -d && webpack-dev-server --content-base src/ --inline --hot",
+    "build:prod": "webpack -p && cp src/index.html dist/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prabhuar1989/mindspace-js-basics.git"
+  },
+  "author": "Ashwin Prabhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prabhuar1989/mindspace-js-basics/issues"
+  },
+  "homepage": "https://github.com/prabhuar1989/mindspace-js-basics#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-2": "^6.22.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
+}
