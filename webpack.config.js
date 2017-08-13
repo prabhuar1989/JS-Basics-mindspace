@@ -4,7 +4,7 @@ var DIST_DIR = path.resolve(__dirname,"dist"); // declare destination folder usi
 var SRC_DIR = path.resolve(__dirname,"src");  // declare source folder using path variable.
 
 var config = {                                 //config object specifying entry file, ouput object , and modules (if any)
-     entry: SRC_DIR +"/app/es6-basics.js",               //entry file
+     entry: SRC_DIR +"/app/es6-udemy.js",               //entry file
      output: {                                      //output object specifying path , filename and public path
      	path: DIST_DIR + "/app",
      	filename: "bundle.js",
@@ -15,7 +15,8 @@ var config = {                                 //config object specifying entry 
             {
             	test: /\.js?/,
             	include: SRC_DIR,
-            	loader: "babel-loader",
+				loader: "babel-loader",
+				exclude: "/node_moules",
             	query: {
             		presets: ["react", "es2015", "stage-2"]
             	}
@@ -23,7 +24,6 @@ var config = {                                 //config object specifying entry 
      	]
 
      }
-
 };
 
 module.exports = config;
